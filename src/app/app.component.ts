@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { products } from './services/services.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myApp4';
-}
+
+  constructor(private products:products) {}
+
+  ngOnInit() {
+    this.products.getProducts()
+      .subscribe(response => {
+        this.products = response;
+      });
+}}
+
+
