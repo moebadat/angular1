@@ -1,1 +1,41 @@
-<p>home works!</p>
+<body style="background-color: bisque">
+  <div class="heading">
+    <h1 style="color: black; margin-left: 370px; margin-bottom: 40px ;">
+      PRODUCTS
+    </h1>
+  </div>
+  <div class="container" *ngFor="let item of items">
+    <div class="row">
+      <div class="col col-xl-8">
+        <div class="card">
+          <img
+            src="{{ item.image }}"
+            class="card-img-top"
+            alt="..."
+            style="
+              max-height: 500px;
+              max-width: 500px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+            "/>
+          <div class="card-body">
+            <h5 class="title">{{ item.title }}</h5>
+            <p class="description">{{ item.description }}</p>
+            <a
+              id="btn-right"
+              class="btn btn-primary"
+              style="
+                padding: 2px;
+                border-radius: 8%;
+                background-color: black;
+                color: white;
+                border-color: white;
+                text-align: right;
+              "
+              >View Item</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

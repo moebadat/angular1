@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { products } from '../services/services.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,22 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  constructor(private product:products) {}
+
+  items:any;
+
+ ngOnInit() {
+   this.product.getProducts()
+     .subscribe(response => {
+       this.items = response;
+        console.log(this.items[0]);
+     });
+
+     
 }
+  
+}
+
+
 
 
