@@ -10,8 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
-  {path : '', component : HomeComponent},
-  {path : 'welcome', component : WelcomeComponent},
+  {path : '/', component : HomeComponent},
+  {path : '/welcome', component : WelcomeComponent},
 
 ];
 
